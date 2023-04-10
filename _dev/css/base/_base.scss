@@ -1,0 +1,100 @@
+:root {
+  font-size: 62.5%;
+  --padding-block-general: 4.2rem;
+  --color-accent: #d23669;
+  --color-text: #222;
+  --duration-medium: 300ms;
+}
+
+body {
+  font-family: 'catamaran-regular-400', Arial, sans-serif;
+  font-size: 1.6rem;
+  color: var(--color-text);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1 {
+  font-size: 3.2rem;
+
+  a {
+    color: inherit;
+    transform: color var(--duration-medium) ease-in-out;
+  }
+
+  &:hover {
+    color: var(--color-accent);
+  }
+}
+
+h2 {
+  font-size: 2.8rem;
+}
+
+h1,
+h2 {
+  font-family: 'montserrat-black-900';
+
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-block-end: 4.2rem;
+  padding-block-start: var(--padding-block-general);
+}
+
+main {
+  margin-inline: auto;
+  max-width: 60ch;
+  margin-block-start: 5.6rem;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  padding-block-end: var(--padding-block-general);
+  margin-block-start: 7rem;
+}
+
+header,
+aside,
+main,
+footer {
+  max-width: 67.2rem;
+  margin-inline: auto;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+}
+
+a.cool {
+  position: relative;
+  font-family: "montserrat-black-900";
+  font-size: 1.2em;
+  text-decoration: none;
+  color: var(--color-accent);
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 3px;
+    width: 100%;
+    height: 0.4em;
+    background-color: var(--color-accent);
+    opacity: .3;
+    transition: all var(--duration-medium) ease-in-out;
+  }
+
+  &:hover::before {
+    bottom: 0;
+    height: 100%;
+  }
+}

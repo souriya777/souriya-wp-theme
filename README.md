@@ -6,3 +6,5 @@ An elegant and minismalist wordpress theme ⛩️
 
 - `_dev/` : `SCSS`, `JS`, `fonts` that manage by `Vitejs` tools.
 - `www/wp-content/themes/souriya-wp-theme/` : source code of the `souriya-wp-theme`
+
+# TODO

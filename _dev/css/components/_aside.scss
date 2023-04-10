@@ -1,0 +1,16 @@
+aside {
+  display: flex;
+  align-items: center;
+
+  img {
+    height: 5.6rem;
+    width: 5.6rem;
+    border-radius: 50%;
+    margin-inline-end: 1.4rem;
+  }
+
+  .text {
+    display: flex;
+    flex-direction: column;
+  }
+}

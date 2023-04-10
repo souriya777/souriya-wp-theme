@@ -1,2 +1,5 @@
-@import "./reset";
-@import "./base";
+@import "./base/reset";
+@import "./base/fonts";
+@import "./base/base";
+
+@import "./components/aside";

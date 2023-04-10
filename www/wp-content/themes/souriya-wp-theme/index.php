@@ -1,7 +1,11 @@
 <?php get_header(); ?>
 
   <aside>
-    picture 2 phrases
+    <img src="https://lh3.googleusercontent.com/drive-viewer/AAOQEOTZceJd-89lhxJV7QhLpt9awsdmhAVOQp0kOtgGvINOd9z26CFQUs0ZWHSEmgE84JBQU-D9gduP0_825kaVMPiSXQcB=w1167-h944" alt="souriya profil" />
+    <div class="text">
+      <p>Blog personnel de <a class="cool" href="/a-propos/">Souriya</a>.</p>
+      <p>Pensées pour moi-même.</p>
+    </div>
   </aside>
 
     <?php if (have_posts()) : ?>
@@ -10,7 +14,7 @@
 
     <main>
       
-      <h2><a href="<?php the_permalink() ?>" rel="bookmark" title="Lien permanent à <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
+      <h2><a class="cool" href="<?php the_permalink() ?>" rel="bookmark" title="Lien permanent à <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
 
       <article>
               <?php the_content('&raquo; Plus &raquo;'); ?>

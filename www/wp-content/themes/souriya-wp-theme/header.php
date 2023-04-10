@@ -11,9 +11,6 @@
   <link rel="alternate" type="application/rss+xml" title="<?php bloginfo('name'); ?> RSS Feed" href="<?php bloginfo('rss2_url'); ?>" />
   <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
   <link rel="shortcut icon" href="favicon.ico" /> 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap" rel="stylesheet">
 
   <?php
     //wp_head();
@@ -23,6 +20,13 @@
 </head>
 <body>
     <header>
-      <h1><a href="/"><?php bloginfo('name'); ?></a></h1>
-      <div class="toggle-theme">toggle</div>
+      <h1>
+        <a href="/">
+          souriya.blog
+          <!-- <?php bloginfo('name'); ?> -->
+        </a>
+      </h1>
+      <div class="toggle-theme">
+        <button>toggle</button>
+      </div>
     </header>

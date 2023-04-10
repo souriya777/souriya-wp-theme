@@ -1,7 +1,6 @@
 <?php
 /**
  * @package WordPress
- * @subpackage zh2
  */
 /*
 Template Name: Archives
