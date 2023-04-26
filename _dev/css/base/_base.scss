@@ -1,30 +1,25 @@
 :root {
   font-size: 62.5%;
-  --padding-block-general: 4.2rem;
+  --color-secondary: #fff;
+  --color-primary: #222;
   --color-accent: #d23669;
-  --color-text: #222;
+  --padding-block-general: 4.2rem;
   --duration-medium: 300ms;
+  --space1: 3rem;
+  --space2: 5rem;
+  --space3: 7rem;
 }
 
 body {
   font-family: 'catamaran-regular-400', Arial, sans-serif;
   font-size: 1.6rem;
-  color: var(--color-text);
+  color: var(--color-primary);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 h1 {
   font-size: 3.2rem;
-
-  a {
-    color: inherit;
-    transform: color var(--duration-medium) ease-in-out;
-  }
-
-  &:hover {
-    color: var(--color-accent);
-  }
 }
 
 h2 {
@@ -48,14 +43,14 @@ header {
 main {
   margin-inline: auto;
   max-width: 60ch;
-  margin-block-start: 5.6rem;
+  margin-block-start: var(--space2);
 }
 
 footer {
   display: flex;
   justify-content: space-between;
   padding-block-end: var(--padding-block-general);
-  margin-block-start: 7rem;
+  margin-block-start: var(--space3);
 }
 
 header,
@@ -66,35 +61,41 @@ footer {
   margin-inline: auto;
 }
 
+article {
+  padding-block-end: var(--space2);
+}
+
 button {
   cursor: pointer;
 }
 
 a {
+  color: var(--color-accent);
   text-decoration: none;
+
+  &:hover {
+    background-color: var(--color-accent);
+    color: var(--color-secondary);
+  }
 }
 
-a.cool {
-  position: relative;
-  font-family: "montserrat-black-900";
-  font-size: 1.2em;
-  text-decoration: none;
-  color: var(--color-accent);
+h1 a {
+  padding: .2rem .4rem;
+  color: inherit;
 
-  &::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: 3px;
-    width: 100%;
-    height: 0.4em;
-    background-color: var(--color-accent);
-    opacity: .3;
-    transition: all var(--duration-medium) ease-in-out;
+  &:hover {
+    background-color: var(--color-primary);
+    color: var(--color-secondary);
   }
+}
 
-  &:hover::before {
-    bottom: 0;
-    height: 100%;
-  }
+main.page h2,
+main.single .date {
+  padding-block-end: var(--space1);
+}
+
+input[name=qfront] {
+  border: none;
+  border-block-end: .2rem solid;
+  outline: none;
 }

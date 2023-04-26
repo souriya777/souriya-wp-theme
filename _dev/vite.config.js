@@ -1,17 +1,26 @@
-import { resolve } from 'path';
+import path from 'path';
+import { defineConfig } from 'vite'
+import { svelte } from '@sveltejs/vite-plugin-svelte'
 
-export default {
+export default defineConfig({
+  plugins: [svelte()],
   build: {
     outDir: '../www/wp-content/themes/souriya-wp-theme/',
     rollupOptions: {
       input: {
-        'style': resolve(__dirname, 'css/main.scss'),
+        'style': path.resolve(__dirname, 'css/main.scss'),
+        'main': path.resolve(__dirname, 'js/main.js')
       },
       output: {
+        entryFileNames: 'js/[name].js',
         assetFileNames: (assetInfo) => {
-          return `style.css`;
+          if (assetInfo.name.match(/\.css/)) {
+            return `style.css`;
+          } else {
+            return `main.js`;
+          }
         },
       }
     }
   },
-}
+})
