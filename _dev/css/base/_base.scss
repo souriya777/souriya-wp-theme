@@ -10,10 +10,18 @@
   --space3: 7rem;
 }
 
+body[data-theme='dark'] {
+  --color-secondary: #282c35;
+  --color-primary: hsla(0, 0%, 100%, 0.88);
+  --color-accent: #ffa7c4;
+}
+
 body {
   font-family: 'catamaran-regular-400', Arial, sans-serif;
   font-size: 1.6rem;
   color: var(--color-primary);
+  background-color: var(--color-secondary);
+  transition: color 0.2s ease-out, background 0.2s ease-out;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -92,6 +100,10 @@ h1 a {
 main.page h2,
 main.single .date {
   padding-block-end: var(--space1);
+}
+
+main p {
+  margin-bottom: 2rem;
 }
 
 input[name=qfront] {
