@@ -5,9 +5,10 @@
   --color-accent: #d23669;
   --padding-block-general: 4.2rem;
   --duration-medium: 300ms;
-  --space1: 3rem;
-  --space2: 5rem;
-  --space3: 7rem;
+  --space1: 1rem;
+  --space2: 3rem;
+  --space3: 5rem;
+  --space4: 7rem;
 }
 
 body[data-theme='dark'] {
@@ -51,14 +52,14 @@ header {
 main {
   margin-inline: auto;
   max-width: 60ch;
-  margin-block-start: var(--space2);
+  margin-block-start: var(--space3);
 }
 
 footer {
   display: flex;
   justify-content: space-between;
   padding-block-end: var(--padding-block-general);
-  margin-block-start: var(--space3);
+  margin-block-start: var(--space4);
 }
 
 header,
@@ -70,7 +71,7 @@ footer {
 }
 
 article {
-  padding-block-end: var(--space2);
+  padding-block-end: var(--space1);
 }
 
 button {
@@ -99,7 +100,7 @@ h1 a {
 
 main.page h2,
 main.single .date {
-  padding-block-end: var(--space1);
+  padding-block-end: var(--space2);
 }
 
 main p {
